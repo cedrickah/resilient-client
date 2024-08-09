@@ -1,5 +1,5 @@
 // Module dependencies.
-import Client from "./client.ts";
+import Client from "./client";
 
 const ResilientClient = Client;
 /**

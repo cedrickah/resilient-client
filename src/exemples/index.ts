@@ -1,4 +1,4 @@
-import ResilientClient from "../index.ts";
+import ResilientClient from "../index";
 
 const client = new ResilientClient(
     { timeout: 10000 },
@@ -8,4 +8,4 @@ const client = new ResilientClient(
     }
 );
 
-client.fetch().then(console.log).catch(console.error);
+client.fetch();

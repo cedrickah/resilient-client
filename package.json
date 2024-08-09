@@ -13,13 +13,12 @@
         "http",
         "resilience"
     ],
-    "main": "./dist/index.esm.js",
+    "main": "./dist/index.cjs.js",
     "module": "./dist/index.esm.js",
     "files": [
         "dist"
     ],
     "types": "./dist/index.d.ts",
-    "type": "module",
     "scripts": {
         "test": "jest --config jest.config.json",
         "dev": "rollup -c -w",

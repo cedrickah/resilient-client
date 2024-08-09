@@ -1,5 +1,5 @@
 import CircuitBreaker from "opossum";
-import Request from "./request.ts";
+import Request from "./request";
 import { AxiosRequestConfig } from "axios";
 
 class Client {
