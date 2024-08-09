@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.0](https://github.com/cedrick-ah/resilient-client/compare/v0.0.7...v0.1.0) (2024-08-09)
+
+
+### Features
+
+* added methods for errors and stats ([71dde58](https://github.com/cedrick-ah/resilient-client/commit/71dde58fda5fbebf97e2fe9919269a085a776fb5))
+* added support for CommonJS ([ac810f6](https://github.com/cedrick-ah/resilient-client/commit/ac810f6155b1b840b466b415d0a2f4a03349ab96))
+
+
+### Bug Fixes
+
+* prevent req config changes with same client ([4cec4b4](https://github.com/cedrick-ah/resilient-client/commit/4cec4b4525f4acfadb6a443d88c75ef1718a5f16))
+
 ### [0.0.7](https://github.com/cedrick-ah/resilient-client/compare/v0.0.6...v0.0.7) (2024-08-08)
 
 
