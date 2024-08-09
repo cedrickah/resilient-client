@@ -3,22 +3,27 @@ import Request from "./request.ts";
 import { AxiosRequestConfig } from "axios";
 
 class Client {
-    _options;
+    _cbOptions;
+    _reqOptions;
     _breaker: CircuitBreaker | null;
 
-    constructor(options: CircuitBreaker.Options) {
-        this._options = options;
+    constructor(
+        cbOptions: CircuitBreaker.Options,
+        reqOptions: AxiosRequestConfig
+    ) {
+        this._cbOptions = cbOptions;
+        this._reqOptions = reqOptions;
         this._breaker = null;
     }
 
-    fetch = (requestConfig: AxiosRequestConfig) => {
+    fetch = () => {
         const abortController = new AbortController();
         const circuitBreakerOptions = {
             abortController,
-            ...this._options,
+            ...this._cbOptions,
         };
 
-        const request = new Request(requestConfig);
+        const request = new Request(this._reqOptions);
         let breaker: CircuitBreaker;
         if (this._breaker) {
             breaker = this._breaker;
