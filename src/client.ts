@@ -16,7 +16,7 @@ class Client {
         this._breaker = null;
     }
 
-    fetch = () => {
+    fetch() {
         const abortController = new AbortController();
         const circuitBreakerOptions = {
             abortController,
@@ -33,7 +33,15 @@ class Client {
         }
 
         return breaker.fire(circuitBreakerOptions.abortController.signal);
-    };
+    }
+
+    static isBreakerError(error: unknown) {
+        return CircuitBreaker.isOurError(error);
+    }
+
+    getStats() {
+        return this._breaker?.stats;
+    }
 }
 
 export default Client;
