@@ -1,19 +1,3 @@
-# resilient-client
-
-A resilience http client, fail and recover fast. This package is in beta. Contributions are welcome.
-
-## Installation
-
-```
-npm i resilient-client
-```
-
-## Usage
-
-Pass circuit breaker(Opossum) options and http agent(Axios) to ResilientClient during instantiation.
-Support both CommonJS and ESM modules.
-
-```
 import ResilientClient from "../index";
 
 const client = new ResilientClient(
@@ -58,12 +42,3 @@ console.log(client.getStats());
     latencyTimes: [],
     latencyMean: 0
 }*/
-```
-
-## Examples
-
-See examples folder for more.
-
-## Documentation
-
-Coming soon.
