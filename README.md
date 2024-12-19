@@ -2,12 +2,6 @@
 
 A resilience http client, fail and recover fast. This package is in beta. Contributions are welcome.
 
-## Installation
-
-```
-npm i resilient-client
-```
-
 ## Usage
 
 Pass circuit breaker(Opossum) options and http agent(Axios) to ResilientClient during instantiation.
