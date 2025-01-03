@@ -1,4 +1,4 @@
-import ResilientClient from "../index";
+import ResilientClient from "../../src/index";
 
 const client = new ResilientClient(
     { timeout: 10000 },
