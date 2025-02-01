@@ -30,5 +30,8 @@ Thumbs.db
 # Ignore build
 build/
 
-# ignore yarn.lock
+# Ignore yarn.lock
 yarn.lock
+
+# Documentation
+docs/
