@@ -1,63 +1,52 @@
 # resilient-client
 
-A resilience http client, fail and recover fast. This package is in beta. Contributions are welcome.
+A resilience `HTTP` client. Fail and recover fast.
+`resilient-client` is a JavaScript `HTTP` client that executes requests
+and monitors their execution status. When request start failing, `resilient-client`
+plays dead and fails fast. You can provide function to manage failures.
+It uses `Opossum`, a `Circuit Breaker` and `Axios` underneath. For more about the `Circuit Breaker` pattern, there are lots of resources
+on the web.
 
 ## Usage
 
-Pass circuit breaker(Opossum) options and http agent(Axios) to ResilientClient during instantiation.
-Support both CommonJS and ESM modules.
+Let's say you've to call an API endpoint. `HTTP` requests might fail.
+All requests from `resilient-client` are perfomed on circuits. `Resilient-client` can throws `HTTP` error or `Circuit Breaker` error. A `Circuit Breaker` error can open the circuit. When the circuit is open subsequent requests are blocked untils the circuit close again.
 
-```
-import ResilientClient from "../index";
+```javascript
+const ResilientClient = require("resilient-client");
+// import ResilientClient from "resilient-client"; // For ESM modules
 
 const client = new ResilientClient(
-    { timeout: 10000 },
     {
-        method: "get",
-        url: "https://www.google.com",
+        timeout: 10000, // Set Opossum timeout option. If our request takes longer than 3 seconds, trigger a failure
+        errorThresholdPercentage: 50, // Set Opossum errorThresholdPercentage option. If 50% of requests fail, open the circuit.
+        resetTimeout: 30000, // Set Opossum resetTimeout option. After 30 seconds, try again.
+    },
+    {
+        baseURL: "http://localhost:8000", // The API URL
     }
 );
 
+// Performs a GET request at http://localhost:8000/users
 client
-    .fetch()
+    .request({ url: "users", method: "get" })
     .then((result) => console.log(result))
     .catch((error) =>
         ResilientClient.isBreakerError(error)
-            ? console.error("Circuit breaker error occured")
-            : console.error("Http error occured")
+            ? console.error("Circuit breaker error occured: " + error) // The request takes longer than 30 seconds
+            : // or 50% of requests fail
+              console.error("Http error occured: " + error)
     );
-
-console.log(client.getStats());
-/*{
-    failures: 0,
-    fallbacks: 0,
-    successes: 0,
-    rejects: 0,
-    fires: 1,
-    timeouts: 0,
-    cacheHits: 0,
-    cacheMisses: 0,
-    semaphoreRejections: 0,
-    percentiles: {
-      '0': 0,
-      '1': 0,
-      '0.25': 0,
-      '0.5': 0,
-      '0.75': 0,
-      '0.9': 0,
-      '0.95': 0,
-      '0.99': 0,
-      '0.995': 0
-    },
-    latencyTimes: [],
-    latencyMean: 0
-}*/
 ```
 
 ## Examples
 
-See examples folder for more.
+See `examples/` folder for more uses cases.
 
 ## Documentation
 
-Coming soon.
+Check out the full documentation [here](https://cedrick-ah.github.io/resilient-client/).
+
+## Contribution
+
+Contributions are welcome. See `CONTRIBUTING.md`.

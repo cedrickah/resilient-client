@@ -4,7 +4,7 @@
     "description": "A resilience http client",
     "repository": {
         "type": "git",
-        "url": "https://github.com/cedrick-ah/resilient-client"
+        "url": "https://github.com/cedrickah/resilient-client"
     },
     "author": "cedrick-ah",
     "license": "MIT",
@@ -22,13 +22,12 @@
     "scripts": {
         "test": "jest --config jest.config.json",
         "dev": "rollup -c -w",
-        "build": "rollup -c",
-        "build:types": "tsc -p ./tsconfig.json --outDir build --declaration true && api-extractor run",
-        "docs": "typedoc src --out docs",
+        "build": "tsc -p ./tsconfig.json --outDir build --declaration true && api-extractor run",
+        "pack": "rollup -c",
+        "docs": "jsdoc  -c ./docs.json --readme ./README.md --destination docs build",
         "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
         "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
         "release": "standard-version",
-        "commit": "cz",
         "prepare": "husky install"
     },
     "devDependencies": {
@@ -52,10 +51,10 @@
         "eslint": "^8.57.0",
         "husky": "^9.0.11",
         "jest": "^29.7.0",
+        "jsdoc": "^4.0.4",
         "maildev": "^2.0.5",
         "nock": "^13.5.4",
         "prettier": "^2.8.8",
-        "rimraf": "^5.0.1",
         "rollup": "^4.6.1",
         "standard-version": "^9.5.0",
         "ts-jest": "^29.1.2",

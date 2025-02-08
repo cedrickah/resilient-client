@@ -4,18 +4,13 @@ describe("[client.ts]", () => {
     jest.mock("../src/client");
 
     const client = new Client(
-        { timeout: 10000 },
+        { timeout: 10000, errorThresholdPercentage: 50 },
         {
-            method: "get",
-            url: "https://www.google.com",
+            baseURL: "http://localhost:8000",
         }
     );
 
     it("should create new Client", async () => {
         expect(client).toBeInstanceOf(Client);
-    });
-
-    it("should return stats", async () => {
-        expect(client.getStats()).toBe(client._breaker?.stats);
     });
 });
