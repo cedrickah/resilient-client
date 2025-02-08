@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](https://github.com/cedrickah/resilient-client/compare/v0.1.1...v1.0.0) (2025-02-08)
+
+
+### Features
+
+* improved client ([aa91ac0](https://github.com/cedrickah/resilient-client/commit/aa91ac0eb40d530300729bee9523fe3c706da8ba))
+
+
+### Bug Fixes
+
+* fixed build errors ([2575d42](https://github.com/cedrickah/resilient-client/commit/2575d42e51f23cca7848ee5c75730b1658dde826))
+* removed build dir ([48f5d31](https://github.com/cedrickah/resilient-client/commit/48f5d31ba336c16e0d38f786646e03fcc338fc5c))
+* removed test dir from build ([fe5aff8](https://github.com/cedrickah/resilient-client/commit/fe5aff86b7d6a11b27f19d970ef1f64e073d7186))
+* revert index.js example ([db9a1fa](https://github.com/cedrickah/resilient-client/commit/db9a1fa0d200882acd302e0308095f898a9a06c0))
+* updated origin url ([0c4e3e1](https://github.com/cedrickah/resilient-client/commit/0c4e3e14567bfd430174e692e5597569a0490dc5))
+
 ### [0.1.1](https://github.com/cedrick-ah/resilient-client/compare/v0.1.0...v0.1.1) (2024-08-11)
 
 ## [0.1.0](https://github.com/cedrick-ah/resilient-client/compare/v0.0.7...v0.1.0) (2024-08-09)
