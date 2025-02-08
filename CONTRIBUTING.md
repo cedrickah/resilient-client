@@ -4,7 +4,7 @@
 
 ### Did you find a bug?
 
-Open a [new issue](https://github.com/cedrick-ah/resilient-client/issues/new).
+Open a [new issue](https://github.com/cedrickah/resilient-client/issues/new).
 Be sure to include a title and clear description, with as much relevant information
 as possible. If you have a code sample that illustrates the problem that would be even better!
 
@@ -12,13 +12,13 @@ as possible. If you have a code sample that illustrates the problem that would b
 
 ### Fork
 
-Fork the project [on GitHub](https://github.com/cedrick-ah/resilient-client)
+Fork the project [on GitHub](https://github.com/cedrickah/resilient-client)
 and check out your copy locally.
 
 ```
 git clone git@github.com:username/resilient-client.git
 cd resilient-client
-git remote add upstream https://github.com/cedrick-ah/resilient-client.git
+git remote add upstream https://github.com/cedrickah/resilient-client.git
 ```
 
 ### Branch
@@ -68,6 +68,6 @@ These are mostly notes for mainteners.
 -   Run standard-version: `npm run release` - this will run the `ci` task
 -   Push to GitHub: `git push --follow-tags origin main`
 -   Publish to npmjs.com: `npm publish`
--   Assuming all goes well, head over to https://github.com/cedrick-ah/resilient-client.git/releases
+-   Assuming all goes well, head over to https://github.com/cedrickah/resilient-client.git/releases
     and update the release with any relevant notes. The generated CHANGELOG.md file should
     be updated, so you can use it to document release changes.
