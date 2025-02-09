@@ -9,6 +9,12 @@ on the web.
 
 ## Usage
 
+```
+npm i resilient-client
+```
+
+## Usage
+
 Let's say you've to call an API endpoint. `HTTP` requests might fail.
 All requests from `resilient-client` are perfomed on circuits. `Resilient-client` can throws `HTTP` error or `Circuit Breaker` error. A `Circuit Breaker` error can open the circuit. When the circuit is open subsequent requests are blocked untils the circuit close again.
 
@@ -45,7 +51,7 @@ See `examples/` folder for more uses cases.
 
 ## Documentation
 
-Check out the full documentation [here](https://cedrick-ah.github.io/resilient-client/).
+Check out the full documentation [here](https://cedrickah.github.io/resilient-client/).
 
 ## Contribution
 
