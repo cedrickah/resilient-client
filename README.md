@@ -7,7 +7,7 @@ plays dead and fails fast. You can provide function to manage failures.
 It uses `Opossum`, a `Circuit Breaker` and `Axios` underneath. For more about the `Circuit Breaker` pattern, there are lots of resources
 on the web.
 
-## Usage
+## Installing
 
 ```
 npm i resilient-client
