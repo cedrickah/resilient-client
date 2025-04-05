@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.2](https://github.com/cedrickah/resilient-client/compare/v1.0.1...v1.0.2) (2025-04-05)
+
+
+### Bug Fixes
+
+* fixed typos ([1abb4ad](https://github.com/cedrickah/resilient-client/commit/1abb4adeab5190c3ec1f2675aff21012d9173bb4))
+
 ### [1.0.1](https://github.com/cedrickah/resilient-client/compare/v1.0.0...v1.0.1) (2025-02-09)
 
 ## [1.0.0](https://github.com/cedrickah/resilient-client/compare/v0.1.1...v1.0.0) (2025-02-08)
